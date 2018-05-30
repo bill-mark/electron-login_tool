@@ -1,0 +1,111 @@
+*, :before, :after{
+    box-sizing: border-box;
+}
+html,
+body {
+    font-family: PingFang SC, Microsoft Yahei, Lantinghei SC, Helvetica Neue, Helvetica, Arial,  \\5FAE\8F6F\96C5\9ED1, STHeitiSC-Light, simsun, \\5B8B\4F53, WenQuanYi Zen Hei, WenQuanYi Micro Hei, 'sans-serif';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+    margin:0;
+    padding:0;
+    list-style-type:none; 
+    font-size: 14px;
+}
+a{ 
+    text-decoration:none;color:black;
+}
+a:hover{
+    text-decoration:none;color:#2389ff;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+fieldset,img {
+    border:0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-style:normal;
+    font-weight:normal;
+}
+ol,ul {
+    list-style:none;
+}
+caption,th {
+    text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-size:100%;
+    font-weight:normal;
+}
+q:before,
+q:after {
+    content:'';
+}
+abbr,acronym { 
+    border:0;
+}
+html {
+    color: #000;
+    font-size: 12px;
+    background: #fff;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    letter-spacing: 0;
+    text-align: left;
+}
+
+input,select,textarea,a,span{
+    outline: 0;
+    margin:0;
+    border: none;
+    padding: 0;
+}
+input,select,textarea{
+    border: 1px solid #ddd;
+    border-radius: 2px;
+}
+/*select{
+    appearance: none;
+    -webkit-appearance: none;
+    text-indent: 4px;
+    background-color: #fff;
+}*/
+input::-webkit-input-placeholder{
+  color:#999;
+}
+.m-data .charts .menu-search .el-input__inner{
+    height:28px !important;
+    border:1px solid #ddd;
+    color:#666;
+    font-size:12px;
+    border-radius: 2px!important;
+}
+.m-data .charts .menu-search .el-input__inner .el-range-separator,
+.m-data .charts .menu-search .el-input__inner i{
+    line-height: 0;
+}
+.version_alert_wrap .el-input__inner{
+    width:280px;
+    height:30px;
+    margin-top:20px;
+    margin-left:30px;
+}
+.version_alert_wrap .el-input__inner:focus{
+    border-color: #dcdfe6;
+}
+.version_alert_wrap .overall_checklist_2{
+    margin-top: 20px;
+    border:1px solid #dcdfe6;
+    margin-left:30px;
+    width: 282px;
+    height: 220px;
+    overflow: auto;
+}
+
+
