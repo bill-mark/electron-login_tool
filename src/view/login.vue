@@ -1,27 +1,30 @@
 <template>
 <div class="wrap">
 	<div class="top">
-		<select class="list_chose"  v-model="login_type">
-		    <option value='0'>个人用户</option>
-		    <option value='1'>企业用户</option>
-		</select>
-		<div class="top_right" @click="close"></div>
+    <div class="top_wrap">
+          <select class="list_chose"  v-model="login_type">
+              <option value='0'>个人用户</option>
+              <option value='1'>企业用户</option>
+          </select>
+          <div class="top_right" @click="close"></div>
+    </div>
+		
 	</div>
 
 
 	<swipe  v-model="index" :autoplayTime="autime">
 
-			  <swipe-item style="height: 100px; line-height: 100px">
-			       <div style="width:500px;height:110px;background-image:url('/static/1.png');
-			                   background-size:500px 110px;"></div>
+			  <swipe-item style="height: 200px; ">
+			     
+              <img :src="imag1" width="500" height="200">      
 			  </swipe-item>
 
 
-			  <swipe-item style="height: 100px; line-height: 100px">
-			  	    <div style="width:500px;height:110px;background-image:url('/static/2.png');
-			                   background-size:500px 110px;"></div>
+			  <swipe-item style="height: 200px; ">
+			  	    <img :src="imag2" width="500" height="200">  
 			  </swipe-item>
 	</swipe>
+  
 
 	<div class="middle">
 		<div class="left">
@@ -52,12 +55,16 @@
 </div>
 </template>
 <script>
+import imag1 from './1.png';
+import imag2 from './2.png';
 export default{
 	components: {
 	    
 	},
 	data(){
 		return{
+           imag1:imag1,
+           imag2:imag2,
            index:0,
            autime:2000,
            login_type:0,
@@ -127,36 +134,34 @@ export default{
   height: 340px;
   background:#a3a3a3;
   .top{
-  	display: flex;
-  	height: 35px;
-  	font-size: 12px;
-  	.swipe_image_1{
-  		 width: 100px;
-         height: 100px;
-         background-image:url('/static/1.png');
-         background-size:100px 100px;
-         background-repeat: no-repeat;
-  	}
-    .list_chose{
-    	 margin-left: 379px;
-    	 width:80px;
-    	 height:20px;
-    	 margin-top: 8px;
-    	 background-color: #d1d1d1;
-    	 border: 1px solid #ddd;
-    	 color:#666;
-    	 outline: none;
-    	 border-radius:4px;
+    position:absolute;
+    z-index: 99;
+    .top_wrap{
+      display: flex;
+      height: 35px;
+      font-size: 12px;
+      .list_chose{
+         margin-left: 379px;
+         width:80px;
+         height:20px;
+         margin-top: 8px;
+         background-color: #d1d1d1;
+         border: 1px solid #ddd;
+         color:#666;
+         outline: none;
+         border-radius:4px;
+      }
+      .top_right{
+           width: 24px;
+           height: 24px;
+           background-image:url('/static/关闭.png');
+           background-size:16px 16px;
+           background-repeat: no-repeat;
+           margin-left: 13px;
+           margin-top: 10px;
+      }
     }
-    .top_right{
-         width: 24px;
-         height: 24px;
-         background-image:url('/static/关闭.png');
-         background-size:16px 16px;
-         background-repeat: no-repeat;
-    	 margin-left: 13px;
-         margin-top: 10px;
-    }
+   
   }
   .middle{
   	display: flex;
